@@ -24,23 +24,33 @@ OBJEKTUM - konkrét egyedek - objektumok - konkrét termék
 """
 
 from Etel import Etel
+import fuggvenyek
 
 """2. lépés létrehozzuk a konkrét példányít a tervrajz alapján"""
-etel1=Etel("Húsleves",1234)
-etel2=Etel("Krumplis",2345)
-etel3=Etel("Rántott hús",2145)
-etel4=Etel("Palacsinta",1450)
+
 etel_lista=[] #berakjuk listába
-etel_lista.append(etel1)
-etel_lista.append(etel2)
-etel_lista.append(etel3)
-etel_lista.append(etel4)
+etel_lista.append(Etel("Húsleves",1234))
+etel_lista.append(Etel("Krumplis",2345))
+etel_lista.append(Etel("Rántott hús",2145))
+etel_lista.append(Etel("Palacsinta",1450))
 
 
-print("Szia én vagyok a " + etel1.nev + " Az állapotom " + etel1.allapot ) #folyamatban kiir
-
+print("Szia én vagyok a " + etel_lista[0].nev + " Az állapotom " + etel_lista[0].allapot ) #folyamatban kiir 
+"""
 etel1.keszul()
 print("Szia én vagyok a " + etel1.nev + " Az állapotom " + etel1.allapot ) #megváltozik készre az állapot
 print("Szia én vagyok a " + etel2.nev + " Az állapotom " + etel2.allapot ) 
 
+"""
+"""Írj metódust ami paraméterében megkapja a listát és kiirja az ételek neveit és árait látványosan"""
 
+
+fuggvenyek.etlap(etel_lista)
+
+"""Írj metódust ami paraméterében megkapja a listát és megmondja az ételek átlagárát"""
+atlagar=fuggvenyek.atlag_ar(etel_lista)
+print(f"Az ételek átlagára: {atlagar}")
+
+"""Írj metódust ami paraméterében megkapja a listát és megmondja a a legdrágább étel nevét"""
+max_i=fuggvenyek.legdragabb(etel_lista)
+print(f"A legdrágább étel neve: {etel_lista[max_i].nev} {etel_lista[max_i].ar}Ft")
