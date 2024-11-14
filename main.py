@@ -93,3 +93,5 @@ print(f"A legidősebb alkalmazott: {alkalmazottak[max_i].nev}, {alkalmazottak[ma
 beoszt=fuggvenyek2.beosztottak(alkalmazottak)
 print(f"Összesen: {beoszt} db 'beosztott' van ")
 
+min_i=fuggvenyek2.legalacsonyabb_fizetes(alkalmazottak)
+print(f"A legalacsonyabb fizetés: {alkalmazottak[min_i].fizetes}Ft")

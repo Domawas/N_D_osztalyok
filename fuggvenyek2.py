@@ -20,3 +20,10 @@ def beosztottak(alkalmazottak):
         if(alkalmazottak[i].pozicio =="Beosztott"):
             beoszt+=1
     return beoszt
+
+def legalacsonyabb_fizetes(alkalmazottak):
+    min_index=0
+    for i in range(0,len(alkalmazottak),1):
+        if(alkalmazottak[i].fizetes < alkalmazottak[min_index].fizetes):
+            min_index=i
+    return min_index
