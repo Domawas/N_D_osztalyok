@@ -10,3 +10,7 @@ class Etel:
     
     def keszul(self):
         self.allapot="kész"
+    
+    def __str__(self):
+        """String metódus, amely visszaadja az étel nevét, árát és állapotát"""
+        return f"Étel: {self.nev}, Ár: {self.ar} Ft, Állapot: {self.allapot}"
